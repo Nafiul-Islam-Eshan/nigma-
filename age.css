@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.container {
+  text-align: center;
+  animation: fadeIn 1s ease ;
+}  
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  opacity: 0.9;
+  animation: type-writter 1s ease;
+}
+
+.age-buttons {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(200px, 1fr));
+  gap: 20px;
+  max-width: 800px;
+  margin: auto;
+} 
+
+.age-buttons button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 2rem;
+  padding: 20px;
+  font-size: 1.1rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.age-buttons span {
+  font-size: 0.855rem;
+  opacity: 0.8;
+}
+
+.age-buttons button:hover {
+  transform: translateY(-8px) scale(1.05);
+  background: rgba(255, 255, 255, 0.3);
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0;
+    transform: scale(0.9); 
+}
+  to {
+     opacity: 1;
+    transform: scale(1); 
+}
+}
+
+@keyframes type-writter {
+  from {
+    opacity: 0;
+    transform: translateX(-130px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
