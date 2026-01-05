@@ -6,6 +6,7 @@ body {
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   min-height: 100vh;
   display: flex;
+  gap: 20px;
   justify-content: center;
   align-items: center;
   color: #ffffff;
@@ -27,6 +28,21 @@ body {
   margin-bottom: 25px;
   font-size: 1.8rem;
   letter-spacing: 1px;
+}
+
+/* Make sentences appear one after another */
+span {
+  display: block;
+  margin-bottom: 12px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+span:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.18);
 }
 
 /* Result rows */
@@ -71,7 +87,7 @@ body {
 
 /* Restart button */
 #restartBtn {
-  width: 100%;
+  width: 20%;
   margin-top: 25px;
   padding: 14px;
   border-radius: 14px;
@@ -109,5 +125,16 @@ body {
 
   .result-container h1 {
     font-size: 1.5rem;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .result-container {
+    padding: 22px 18px;
+  }
+
+  .result-container h1 {
+    font-size: 1.4rem;
   }
 }
