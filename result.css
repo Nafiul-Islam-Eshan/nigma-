@@ -1,0 +1,113 @@
+/* ===== RESULT PAGE ===== */
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.result-container {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 30px 35px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+  animation: popIn 0.8s ease;
+}
+
+.result-container h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+}
+
+/* Result rows */
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 14px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.result-item:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.result-item span:first-child {
+  font-weight: 500;
+  opacity: 0.85;
+}
+
+.result-item span:last-child {
+  font-weight: 600;
+  text-align: right;
+}
+
+/* Highlight mental age */
+#mentalAge {
+  color: #ffd166;
+  font-size: 1.2rem;
+}
+
+/* Funny labels emphasis */
+#maturity,
+#lifeStatus,
+#brainMode {
+  color: #ffb703;
+}
+
+/* Restart button */
+#restartBtn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  border-radius: 14px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: #fff;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#restartBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(238, 9, 121, 0.5);
+}
+
+/* Entry animation */
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 480px) {
+  .result-container {
+    padding: 25px 20px;
+  }
+
+  .result-container h1 {
+    font-size: 1.5rem;
+  }
+}
